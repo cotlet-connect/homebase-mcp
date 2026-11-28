@@ -114,6 +114,80 @@ python3 homebase_agent.py tools     # list Cotlet.dev tools
 python3 homebase_agent.py serve     # start the stdio MCP server (same as no argument)
 ```
 
+## What you can ask your AI to do in Homebase
+
+These are real jobs Homebase users asked about. Cotlet lets ChatGPT, Claude or any MCP client do them in your own signed-in Homebase account.
+
+### Schedule and requests
+
+#### Can ChatGPT or Claude build next week's schedule in Homebase from availability and time off?
+
+Partly. Homebase has Auto-schedule in Schedule Builder on its own. With Cotlet, ChatGPT or Claude works in your signed-in Homebase account, builds the week from availability and approved time off and lists conflicts and overtime risks. Nothing is published until you say yes.
+
+Ask your agent: "Build next week's Homebase schedule from availability and approved time off, list conflicts and overtime risks, and do not publish."
+
+#### Can ChatGPT or Claude track shift swaps in Homebase so nobody argues about who agreed?
+
+Yes. With Cotlet, your agent reads the shift swaps and offered shifts in your signed-in Homebase account, then lists who agreed and who actually worked each shift. It only reads. Nothing is changed or sent.
+
+Ask your agent: "List every Homebase shift swap and offered shift from last week, who agreed, and who actually worked."
+
+As an API endpoint: Yes. Do the check once with your agent in Cotlet and save it as an endpoint, then call it every Monday from n8n, Make, Zapier or a script.
+
+#### Can ChatGPT or Claude show PTO balances and pending time off requests in Homebase?
+
+Yes. With Cotlet, your agent opens the time off policies in your signed-in Homebase account and lists PTO and sick leave balances for each employee, plus the requests waiting for approval. It only reads. Nothing is approved.
+
+Ask your agent: "Show PTO and sick leave balances for each Homebase employee and the time off requests pending approval."
+
+As an API endpoint: Yes. Save the balance list as an endpoint in Cotlet and call it from n8n, Make or Zapier whenever you want a fresh list.
+
+### Timesheets and payroll
+
+#### Can ChatGPT or Claude review Homebase timecards before payroll and flag missed clock outs?
+
+Yes. With Cotlet, your agent opens Review Time Cards in your signed-in Homebase account and lists the pay period's timecards with missed clock outs, edits and overtime. It fixes nothing. A fix is made only after you say yes.
+
+Ask your agent: "List all Homebase timecards for the pay period with missed clock outs, edits and overtime, and fix nothing yet."
+
+As an API endpoint: Yes. Save the check as an endpoint in Cotlet and call it every Monday from n8n, Make, Zapier or a script to get the list by email.
+
+#### Can ChatGPT or Claude check Homebase hours before they go to Gusto or QuickBooks?
+
+Partly. Homebase sends timesheets to Gusto through its own integration. With Cotlet, your agent reads the approved timesheets in your signed-in Homebase account and lists employees who do not match your payroll list. It only reads.
+
+Ask your agent: "Export this pay period's approved Homebase timesheets for Gusto and list the employees who do not match my payroll list."
+
+As an API endpoint: Yes. Save the check as an endpoint in Cotlet that returns approved hours and the mismatches as JSON, and call it from n8n or Make before each payroll.
+
+### Tips and labor cost
+
+#### Can ChatGPT or Claude split the tip pool in Homebase after close?
+
+Partly. Homebase has Tip Pooling with a tip policy on its own. With Cotlet, your agent reads the day's sales and hours in your signed-in account and works out each person's share and the total you owe. Cotlet does not pay anyone.
+
+Ask your agent: "Calculate tonight's Homebase tip pool shares per person from the sales and hours, and show the total I owe each person."
+
+As an API endpoint: Yes. Save the calculation as an endpoint in Cotlet and call it every night from n8n, Make or Zapier to post each share to Slack.
+
+#### Can ChatGPT or Claude compare labor cost with sales in Homebase and flag days over target?
+
+Yes. With Cotlet, your agent reads the labor and sales Reports in your signed-in Homebase account, puts them side by side by day and flags the days where labor ran over the target you give. It only reads.
+
+Ask your agent: "Compare last week's Homebase labor cost with sales by day and flag the days where labor ran over my target of 30 percent."
+
+As an API endpoint: Yes. Save the comparison as an endpoint in Cotlet and call it every Monday from n8n, Make or Zapier to add the week to Google Sheets.
+
+### Hiring
+
+#### Can ChatGPT or Claude write and post a job in Homebase and list the best applicants?
+
+Partly. Homebase has an AI Screener in Hiring that rates applicants on its own. With Cotlet, your agent writes the job post, adds it in Hiring and lists the applicants the screener rated best. Nothing is posted until you say yes.
+
+Ask your agent: "Write a job post for a line cook at this location, show it to me first, then list applicants the Homebase AI screener rated best."
+
+As an API endpoint: Yes. Save the applicant list as an endpoint in Cotlet and call it every morning from n8n, Make or Zapier to get the best applicants by email.
+
 ## Questions from Homebase users
 
 **Does Homebase have an API?**
